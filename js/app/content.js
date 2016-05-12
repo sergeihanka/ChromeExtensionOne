@@ -1,0 +1,1 @@
+﻿alert('content script loaded');
