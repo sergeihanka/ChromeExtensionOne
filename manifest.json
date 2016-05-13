@@ -1,15 +1,15 @@
 ﻿{
-	"name": "Sergei's Test Extension",
+	"name": "Sergei's Test",
 	"version": "1.0",
 	"manifest_version": 2,
 
-	"description": "Sergei Test",
+	"description": "Sergei's Test",
 	"icons": {
 		"48": "icon_48.png"
 	},
 	"browser_action": {
 		"default_popup": "popup.html",
-		"default_title": "Sergei"
+		"default_title": "Sergei's Test"
 	},
 	"content_scripts": [ {
 	"js": [ "js/lib/jquery-1.8.2.min.js", "js/app/popup.js" ],

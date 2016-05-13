@@ -1,5 +1,11 @@
-﻿var myApp = angular.module('ExtensionsApp', []);
+﻿angular.module('ExtensionApp', []).controller("PageController", function ($scope) {
+    $scope.message = "M!";
 
-myApp.controller("PopupController", function ($scope) {
-    $scope.message = "Hello World";
+    //Assign action to button clicked
+    document.getElementById("HI").addEventListener("click", function() {
+        $scope.message = "BUTTON CLICKED!";
+        $scope.$apply();
+    });
 });
+
+
