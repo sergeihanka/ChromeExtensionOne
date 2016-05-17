@@ -1,12 +1,14 @@
 ﻿angular.module('ExtensionApp', []).controller("PageController", function ($scope) {
     $scope.message = "M!";
 
-    var title = document.getElementById("#fields[title]");
-    var status = "#s2id_fields[status_id]";
+	// Action when 'Register Schedule' button is clicked
+	document.getElementById('HI').addEventListener('click', function() {
 
-    //Assign action to button clicked
-    document.getElementById("HI").addEventListener("click", function () {        
-        $scope.message = "BUTTON CLICKED!";
-        $scope.$apply();
-    });
+		$scope.message = "BUTTON CLICKED!";
+		$scope.$apply();
+
+		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+			chrome.tabs.sendMessage(tabs[0].id, {"message": "test1"});
+		});
+	}, false);
 });

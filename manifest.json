@@ -13,15 +13,12 @@
 	},
 
 	"content_scripts": [ {
-		"js": [ "js/lib/jquery-2.2.2.min.js","js/app/inject.js" ],
+		"js": [ "js/lib/angular.min.js","js/app/inject.js" ],
 		"matches": [ "http://*/*", "https://*/*" ],
 		"run_at": "document_start"
 	}],
 
-	"permissions": [ "http://*/*", "https://*/*", "unlimitedStorage", "contextMenus", "cookies", "tabs", "notifications" ],
-
-	"web_accessible_resources": ["inject.js"],
+	"permissions": [ "http://*/*", "https://*/*", "tabs", "activeTab" ],
 
 	"content_security_policy": "script-src 'self'; object-src 'self'"
-
 }
